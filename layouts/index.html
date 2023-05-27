@@ -58,6 +58,10 @@
             {{ $pages = $pages | append . }}
         {{ end }}
 
+        {{ with .Site.GetPage "/resources" }}
+            {{ $pages = $pages | append . }}
+        {{ end }}
+
         {{ with .Site.GetPage "/projects" }}
             {{ $pages = $pages | append . }}
         {{ end }}
@@ -71,6 +75,9 @@
         {{ else if eq (os.Stat .File.Dir).Name "media" }}
             <!-- Now for some cool projects -->
             {{ partial "media.html" . }}
+        {{ else if eq (os.Stat .File.Dir).Name "resources" }}
+            <!-- Now for some cool projects -->
+            {{ partial "resources.html" . }}
         {{ else if eq (os.Stat .File.Dir).Name "blog" }}
             <!-- Let`s show some blog posts -->
             <!-- {{ partial "home/blog.html" . }} -->
