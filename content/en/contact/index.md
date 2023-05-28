@@ -1,13 +1,20 @@
 ---
 title: "Contact Form"
-weight: 1
+weight: 11
 ---
 
-(**DOING Desc ->**) For more information / For consulting, trainings on bustedattack reache out to us
+Feel free to reach out to us for more information. We offer consulting services and training programs on BUSted attack.
 
 {{< md >}}
 <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
-<form action={FORM_ENDPOINT} method="POST" target="_blank">
+<style>
+  textarea {
+    resize: vertical; /* Allow vertical resizing */
+    height: auto; /* Set initial height to auto */
+    min-height: 100px; /* Set a minimum height */
+  }
+</style>
+<form action="https://public.herotofu.com/v1/f71bc140-fd6c-11ed-9eca-1f15a141e038" method="POST" target="_blank">
   <div class="mb-3 pt-0">
     <input
       type="text"
@@ -22,6 +29,15 @@ weight: 1
       type="email"
       placeholder="Email"
       name="email"
+      class="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
+      required
+    />
+  </div>
+  <div class="mb-3 pt-0">
+    <input
+      type="text"
+      placeholder="Subject"
+      name="subject"
       class="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
       required
     />
