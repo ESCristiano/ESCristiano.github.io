@@ -1,6 +1,6 @@
 ---
 source: "The Register"
-weight: 0
+weight: 1
 link: https://www.theregister.com/2023/05/15/mcu_side_channel_attack/
 ---
 

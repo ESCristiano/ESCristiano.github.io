@@ -1,6 +1,6 @@
 ---
 title: "About BUSted"
-image: "contention.png"
+# image: "contention.png"
 weight: 0
 ---
 
