@@ -1,9 +1,7 @@
 ---
-title: "Contact Form"
+title: "Talk With Us"
 weight: 11
 ---
-
-Reach out to us for more information. We provide consulting services, training programs, and pentesting for the BUSTed attack.
 
 {{< md >}}
 <style>
