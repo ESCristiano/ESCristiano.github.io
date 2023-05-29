@@ -44,11 +44,23 @@
             {{ with .Site.GetPage "/home" }}
             {{ $pages := .Resources.ByType "page" }}
 
-            {{ with .Site.GetPage "/blog" }}
+            {{ with .Site.GetPage "/contact" }}
                 {{ $pages = $pages | append . }}
             {{ end }}
 
-            {{ with .Site.GetPage "/projects" }}
+            {{ with .Site.GetPage "/media" }}
+                {{ $pages = $pages | append . }}
+            {{ end }}
+
+            {{ with .Site.GetPage "/services" }}
+                {{ $pages = $pages | append . }}
+            {{ end }}
+
+            {{ with .Site.GetPage "/authors" }}
+                {{ $pages = $pages | append . }}
+            {{ end }}
+
+            {{ with .Site.GetPage "/resources" }}
                 {{ $pages = $pages | append . }}
             {{ end }}
 
