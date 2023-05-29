@@ -6,8 +6,6 @@ weight: 11
 Reach out to us for more information. We provide consulting services, training programs, and pentesting for the BUSTed attack.
 
 {{< md >}}
-<!-- <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>-->
-
 <style>
   /* Styling for the form container */
   #contact-form {
@@ -49,9 +47,8 @@ Reach out to us for more information. We provide consulting services, training p
   #contact-form button:active {
     background-color: #265cb7;
   }
-</style>
 
-<p><br></p>
+</style>
 
 <form id="contact-form" action="https://public.herotofu.com/v1/f71bc140-fd6c-11ed-9eca-1f15a141e038" method="POST" target="_blank">
   <div class="mb-3 pt-0">
@@ -89,5 +86,4 @@ Reach out to us for more information. We provide consulting services, training p
     <button type="submit">Send a message</button>
   </div>
 </form>
-
 {{< /md >}}
