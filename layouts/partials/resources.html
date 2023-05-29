@@ -1,29 +1,4 @@
 {{ with .Site.GetPage "/resources" }}
-<head>
-    <style>
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusts the grid columns based on window width */
-            grid-gap: 20px; /* Gap between grid items */
-          }
-          .grid-item {
-            position: relative;
-            background-color: #f2f2f2; /* Background color for grid items */
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            height: 200px; /* Set a fixed height for the grid items */
-          }
-          .custom-style {
-            margin: 0;
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #00b8d4;
-          }
-    </style>
-  </head>
 <div class="section" id="{{ .Title | urlize }}">
     <!-- Begin Projects container -->
     <div class="container">

@@ -1,0 +1,14 @@
+{{ with .Site.GetPage "/contact" }}
+<div class="section" id="{{ .Title | urlize }}">
+    <!-- Begin Projects container -->
+    <div class="container">
+        <h2 class="title is-2 has-text-centered">
+            {{ .Title | markdownify }}
+        </h2>
+        <div class="section">
+          {{ .Content | markdownify }}            
+        </div>
+      <div class="container"><hr></div>
+    </div>
+</div>
+{{ end }}
