@@ -3,24 +3,62 @@ title: "Contact Form"
 weight: 11
 ---
 
-Feel free to reach out to us for more information. We offer consulting services and training programs on BUSted attack.
+Reach out to us for more information. We provide consulting services, training programs, and pentesting for the BUSTed attack.
 
 {{< md >}}
-<script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
+<!-- <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>-->
+
 <style>
-  textarea {
-    resize: vertical; /* Allow vertical resizing */
-    height: auto; /* Set initial height to auto */
-    min-height: 100px; /* Set a minimum height */
+  /* Styling for the form container */
+  #contact-form {
+    max-width: auto;
+    margin: 0 auto;
+  }
+
+  /* Styling for the form inputs and textarea */
+  #contact-form input,
+  #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  /* Styling for the form button */
+  #contact-form button {
+    background-color: #4a86e8;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 30px; /* Adjusted padding for a slightly wider button */
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+  }
+
+  /* Styling for the form button on hover */
+  #contact-form button:hover {
+    background-color: #377ad3;
+  }
+
+  /* Styling for the form button when pressed */
+  #contact-form button:active {
+    background-color: #265cb7;
   }
 </style>
-<form action="https://public.herotofu.com/v1/f71bc140-fd6c-11ed-9eca-1f15a141e038" method="POST" target="_blank">
+
+<p><br></p>
+
+<form id="contact-form" action="https://public.herotofu.com/v1/f71bc140-fd6c-11ed-9eca-1f15a141e038" method="POST" target="_blank">
   <div class="mb-3 pt-0">
     <input
       type="text"
       placeholder="Your name"
       name="name"
-      class="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
       required
     />
   </div>
@@ -29,7 +67,6 @@ Feel free to reach out to us for more information. We offer consulting services 
       type="email"
       placeholder="Email"
       name="email"
-      class="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
       required
     />
   </div>
@@ -38,7 +75,6 @@ Feel free to reach out to us for more information. We offer consulting services 
       type="text"
       placeholder="Subject"
       name="subject"
-      class="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
       required
     />
   </div>
@@ -46,15 +82,12 @@ Feel free to reach out to us for more information. We offer consulting services 
     <textarea
       placeholder="Your message"
       name="message"
-      class="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
       required
     ></textarea>
   </div>
-  <div class="mb-3 pt-0">
-    <button
-      class="bg-blue-500 text-white active:bg-blue-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-      type="submit"
-    >Send a message</button>
+  <div class="mb-3 pt-0" style="text-align: center;">
+    <button type="submit">Send a message</button>
   </div>
 </form>
+
 {{< /md >}}
