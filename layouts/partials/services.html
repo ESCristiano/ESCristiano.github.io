@@ -257,10 +257,13 @@
         <h2 class="title is-2 has-text-centered">
             {{ .Title | markdownify }}
         </h2>     
+        <h2 class="title is-4 has-text-centered">
+            {{ .Params.subtitle | markdownify }}
+        </h2>   
         <div class="mx-auto max-w-2xl lg:text-center">
             {{/*  <h1 class="text-base font-semibold leading-7 text-indigo-600">Worrier about your system security?</h1>  */}}
             {{/*  <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{ .Title | markdownify }}</p>  */}}
-            <p class="mt-6 text-lg leading-8 text-gray-600">{{ .Content | markdownify }}</p>
+            <p class=" text-lg leading-8 text-gray-600">{{ .Content | markdownify }}</p>
           </div>
         <div class="section">
             <div class="columns is-multiline">
@@ -298,7 +301,7 @@
             {{/*  <h3 class="title is-3 has-text-centered">
                 <p> Talk With Us</p>
             </h3>     */}}
-            <form id="contact-form" action="https://public.herotofu.com/v1/f71bc140-fd6c-11ed-9eca-1f15a141e038" method="POST" target="_blank">
+            {{/*  <form id="contact-form" action="https://public.herotofu.com/v1/f71bc140-fd6c-11ed-9eca-1f15a141e038" method="POST" target="_blank">
                 <div class="mb-3 pt-0">
                   <input
                     type="text"
@@ -333,7 +336,7 @@
                 <div class="mb-3 pt-0" style="text-align: center;">
                   <button type="submit">Talk With Us</button>
                 </div>
-              </form>
+              </form>  */}}
         <div class="container"><hr></div>
     </div>
 </div>
