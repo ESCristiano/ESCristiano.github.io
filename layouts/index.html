@@ -9,7 +9,6 @@
         {{ partial "head/css.html" . }}
         {{ partial "css/owlCarousel.html" . }}
     </head>
-
     <body>
         {{ with .Site.GetPage "/home" }}
         <section id="top" class="hero is-{{ .Site.Params.home.introHeight | default "fullheight" }}">
@@ -81,6 +80,9 @@
         {{ else if eq (os.Stat .File.Dir).Name "resources" }}
             <!-- Now for some cool authors -->
             {{ partial "resources.html" . }}
+        {{ else if eq (os.Stat .File.Dir).Name "contact" }}
+            <!-- Now for some cool authors -->
+            {{ partial "contact.html" . }}
         {{ else if eq (os.Stat .File.Dir).Name "blog" }}
             <!-- Let`s show some blog posts -->
             <!-- {{ partial "home/blog.html" . }} -->
