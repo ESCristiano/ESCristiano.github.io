@@ -20,7 +20,7 @@
                 <div class="container has-text-centered">
                     <!-- Title and tagline -->
                     <h1 class="bold-title {{ if or (.Site.Params.fadeIn | default true) .Site.Params.fadeInIndex }}fade-in one{{ end }}">
-                        {{ .Title | markdownify }}
+                        Meet <p style="color: #00b8d4; display: inline;"> BUSted</p>
                     </h1>
                     <div class="subtitle is-3 {{ if or (.Site.Params.fadeIn | default true) .Site.Params.fadeInIndex }}fade-in two{{ end }}">
                         {{ .Content }}
@@ -57,6 +57,10 @@
             {{ $pages = $pages | append . }}
         {{ end }}
 
+        {{ with .Site.GetPage "/services" }}
+            {{ $pages = $pages | append . }}
+        {{ end }}
+
         {{ with .Site.GetPage "/resources" }}
             {{ $pages = $pages | append . }}
         {{ end }}
@@ -65,9 +69,9 @@
             {{ $pages = $pages | append . }}
         {{ end }}
 
-        {{ with .Site.GetPage "/contact" }}
+        {{/*  {{ with .Site.GetPage "/contact" }}
         {{ $pages = $pages | append . }}
-        {{ end }}
+        {{ end }}  */}}
 
         {{ range sort $pages "Params.weight" }}
         {{ if .File }}
@@ -83,6 +87,9 @@
         {{ else if eq (os.Stat .File.Dir).Name "contact" }}
             <!-- Now for some cool authors -->
             {{ partial "contact.html" . }}
+        {{ else if eq (os.Stat .File.Dir).Name "services" }}
+            <!-- Now for some cool authors -->
+            {{ partial "services.html" . }}
         {{ else if eq (os.Stat .File.Dir).Name "blog" }}
             <!-- Let`s show some blog posts -->
             <!-- {{ partial "home/blog.html" . }} -->

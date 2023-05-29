@@ -1,6 +1,6 @@
 ---
 source: "Computing"
-weight: 3
+weight: 2
 link: https://www.computing.co.uk/news/4115235/arm-channel-attack-cortex-indicative-architectural-flaws
 ---
 

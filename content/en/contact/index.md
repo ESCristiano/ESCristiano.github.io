@@ -26,16 +26,17 @@ Reach out to us for more information. We provide consulting services, training p
 
   /* Styling for the form button */
   #contact-form button {
-    background-color: #4a86e8;
+    background-color: #00b8d4;
     color: #fff;
     border: none;
     border-radius: 4px;
-    padding: 12px 30px; /* Adjusted padding for a slightly wider button */
+    padding: 12px 70px;
     font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-transform: uppercase;
+    font-weight: bold;
   }
 
   /* Styling for the form button on hover */
