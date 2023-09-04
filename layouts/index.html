@@ -3,8 +3,17 @@
 
     <head>
         {{ partial "head/metadata.html" . }}
-        {{ if .Site.Params.plausible }}{{ partial "head/plausible.html" . }}{{ end }}
-        <script defer data-domain="bustedattack.com" src="https://plausible.io/js/script.js"></script>
+        {{/*  {{ if .Site.Params.plausible }}{{ partial "head/plausible.html" . }}{{ end }}
+        <script defer data-domain="bustedattack.com" src="https://plausible.io/js/script.js"></script>  */}}
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-MHYJW7TTLV"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MHYJW7TTLV');
+        </script>
         {{ partial "head/openGraph.html" . }}
         {{ partial "head/favicons.html" . }}
         {{ partial "head/css.html" . }}

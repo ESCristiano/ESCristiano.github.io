@@ -1,5 +1,5 @@
 ---
 title: "White Paper"
-weight: 2
+weight: 3
 link: /resources/BUSted-WP.pdf
 ---
