@@ -66,10 +66,10 @@
         {{ with .Site.GetPage "/media" }}
             {{ $pages = $pages | append . }}
         {{ end }}
-
+{{/*  
         {{ with .Site.GetPage "/services" }}
             {{ $pages = $pages | append . }}
-        {{ end }}
+        {{ end }}  */}}
 
         {{ with .Site.GetPage "/resources" }}
             {{ $pages = $pages | append . }}
@@ -78,10 +78,10 @@
         {{ with .Site.GetPage "/authors" }}
             {{ $pages = $pages | append . }}
         {{ end }}
-
+{{/*  
         {{ with .Site.GetPage "/contact" }}
         {{ $pages = $pages | append . }}
-        {{ end }}
+        {{ end }}  */}}
 
         {{ range sort $pages "Params.weight" }}
         {{ if .File }}
@@ -94,12 +94,12 @@
         {{ else if eq (os.Stat .File.Dir).Name "resources" }}
             <!-- Now for some cool authors -->
             {{ partial "resources.html" . }}
-        {{ else if eq (os.Stat .File.Dir).Name "contact" }}
+        {{/*  {{ else if eq (os.Stat .File.Dir).Name "contact" }}
             <!-- Now for some cool authors -->
-            {{ partial "contact.html" . }}
-        {{ else if eq (os.Stat .File.Dir).Name "services" }}
+            {{ partial "contact.html" . }}  */}}
+        {{/*  {{ else if eq (os.Stat .File.Dir).Name "services" }}
             <!-- Now for some cool authors -->
-            {{ partial "services.html" . }}
+            {{ partial "services.html" . }}  */}}
         {{ else if eq (os.Stat .File.Dir).Name "blog" }}
             <!-- Let`s show some blog posts -->
             <!-- {{ partial "home/blog.html" . }} -->
